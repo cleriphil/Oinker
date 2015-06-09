@@ -1,0 +1,6 @@
+<h1>Oinks by {{handle}}</h1>
+<ul>
+  {{#each}}
+    <li>  {{#link-to 'oink' this.id}}oink: {{text}} {{handle}} {{/link-to}} </li>
+  {{/each}}
+</ul>

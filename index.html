@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oinker</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="libs/jquery-1.11.3.js"></script>
+    <script src="libs/ember-template-compiler.js"></script>
+    <script src="libs/ember.debug.js"></script>
+    <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+
+    <script src="oinker.js"></script>
+    <script src="router.js"></script>
+    <script src="store.js"></script>
+
+    <script src="routes/oinks.js"></script>
+    <script src="routes/oink.js"></script>
+    <script src="routes/handle.js"></script>
+
+    <script src="controllers/oink.js"></script>
+
+    <script> EmberHandlebarsLoader.loadTemplates([
+      'application', 'oinks', 'oink', 'handle'
+    ]);
+    </script>
+
+  </head>
+  <body>
+  </body>
+  </html>
