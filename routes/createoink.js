@@ -1,5 +1,5 @@
 Oinker.OinksRoute = Ember.Route.extend({
-  model: function() {
+  model: function(){
     return oinks;
   }
 });

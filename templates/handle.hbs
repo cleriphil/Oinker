@@ -1,6 +1,6 @@
-<h1>Oinks by {{handle}}</h1>
+<h1>Oinks by {{this}}</h1>
 <ul>
   {{#each}}
-    <li>  {{#link-to 'oink' this.id}}oink: {{text}} {{handle}} {{/link-to}} </li>
+    <li>  oink: {{#link-to 'oink' this.id}} {{text}}  {{/link-to}} by: {{handle}}</li>
   {{/each}}
 </ul>

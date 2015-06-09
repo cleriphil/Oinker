@@ -4,3 +4,8 @@
     <li>{{#link-to 'handle' this.handle}}handle: {{handle}}{{/link-to}}  {{#link-to 'oink' this.id}}oink: {{text}}{{/link-to}} </li>
   {{/each}}
 </ul>
+
+{{#link-to 'createoink'}}Create Oink{{/link-to}}
+
+<a href="#" {{action 'sortByDate'}}>Sort by date</a>
+<a href="#" {{action 'sortByHandle'}}>Sort by handle</a>

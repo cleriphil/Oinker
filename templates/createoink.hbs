@@ -1,0 +1,21 @@
+Create Oink
+
+{{#if isEditing}}
+  <form>
+    <div class="form group">
+      <label for="handle">Handle</label>
+      {{input id="handle" class="form-control" value=handle}}
+    </div>
+    <div class="form group">
+      <label for="text">Text</label>
+      {{textarea id="text" class="form-control" rows="15" value=text}}
+    </div>
+    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+  </form>
+
+{{else}}
+
+  <p>{{text}}</p>
+
+  <button class="btn btn-primary" {{action 'create'}}>Create New Oink</button>
+{{/if}}
