@@ -1,2 +1,32 @@
 <h4>{{text}}</h4>
 <h5>{{handle}}</h5>
+<h5>{{date}}</h5>
+
+Reply:
+{{#if isEditing}}
+  <form>
+    <div class="form group">
+      <label for="inputhandle">Handle</label>
+      {{input id="inputhandle" class="form-control" value=inputhandle}}
+    </div>
+    <div class="form group">
+      <label for="inputtext">Text</label>
+      {{textarea id="inputtext" class="form-control" rows="3" value=inputtext}}
+    </div>
+    <div class="form group">
+      <label for="replyTo"></label>
+      {{input id="replyTo" type="hidden" class="form-control" value=id}}
+    </div>
+    <button class="btn btn-primary" {{action 'save' handle text}}>Save</button>
+  </form>
+
+{{else}}
+
+  <p>{{text}}</p>
+
+  <button class="btn btn-primary" {{action 'create'}}>Reply to Oink</button>
+{{/if}}
+
+Show replies:
+
+<p>{{#link-to 'replies' this.id}}Replies to this oink{{/link-to}}</p>

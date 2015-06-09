@@ -8,9 +8,14 @@ Create Oink
     </div>
     <div class="form group">
       <label for="text">Text</label>
-      {{textarea id="text" class="form-control" rows="15" value=text}}
+      {{textarea id="text" class="form-control" rows="3" value=text}}
     </div>
-    <button class="btn btn-primary" {{action 'save'}}>Save</button>
+    <div class="form group">
+      <label for="hashtags">Hashtags (separate by commas without spaces)</label>
+      {{textarea id="hashtags" class="form-control" rows="1" value=hashtags}}
+    </div>
+
+    <button class="btn btn-primary" {{action 'save' handle text}}>Save</button>
   </form>
 
 {{else}}

@@ -5,17 +5,20 @@ Oinker.CreateoinkController = Ember.Controller.extend({
       this.set('isEditing', true);
     },
     save: function() {
-      this.set('isEditing', false);
-
-      // alert(this.get("text"));
-      // alert(this.get("handle"));
-
       var text = this.get("text");
       var handle = this.get("handle");
-      var newOink = new Oink(text, handle);
-      console.log(newOink);
-      oinks.addObject(newOink);
-      console.log(oinks);
+      var hashtags = this.get("hashtags").split(',');
+
+      if (text.length < 141) {
+        this.set('isEditing', false);
+        var newOink = new Oink(text, handle, 0);
+        newOink.hashtags = hashtags;
+        oinks.addObject(newOink);
+        console.log(newOink);
+      }
+      else {
+        alert("Your oink is too long! Please keep your oink short.")
+      }
     }
   }
 
